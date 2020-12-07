@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CodeService } from './code.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'ng';
+export class AppComponent implements OnInit {
+
+  constructor(private codeService: CodeService) {}
+  ngOnInit(): void {
+    this.codeService.initializeGrid()
+  }
+
+
 }

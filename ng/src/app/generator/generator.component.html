@@ -1,0 +1,19 @@
+<div class="header">
+    <input type="text" [(ngModel)]="char" (keydown)="onCharKeydown($event)" (keyup)="onCharKeyup($event)" [disabled]="inputDisabled">
+    <div class="clock">Clock</div>
+    <button type="button" (click)="initGridGenerator()" [disabled]="buttonDisabled">Generate 2D grid</button>
+</div>
+<table>
+    <thead>
+        <th></th>
+        <th *ngFor="let item of indexes; let i = index">{{ i }}</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of grid; let i = index">
+            <td>{{i}}</td>
+            <td *ngFor="let col of row">{{col}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<app-display></app-display>

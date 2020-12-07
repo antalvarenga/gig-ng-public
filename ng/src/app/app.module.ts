@@ -3,14 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GeneratorComponent } from './generator/generator.component';
+import { PaymentsComponent } from './payments/payments.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DisplayComponent } from './display/display.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GeneratorComponent,
+    PaymentsComponent,
+    DisplayComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
