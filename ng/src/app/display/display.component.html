@@ -1,2 +1,4 @@
-<div [class.live]="true">{{ status }}</div>
-<div>Your code now: {{ code }}</div>
+<div class="display">
+    <div [class]="'status'" [class.live]="status == 'Live'">{{ status }}</div>
+    <div class="code">Your code: <span class="code-number">{{ code }}</span></div>
+</div>

@@ -1,0 +1,37 @@
+.display {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.code {
+    border: 1px solid #8a9da4;
+    width: 200px;
+    margin: 0 auto;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 4px;
+}
+
+.code-number {
+    font-weight: 700;
+}
+.status {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+   &::before {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: green;
+        position: relative;
+        bottom: 0px;
+        margin-right: 4px;
+    }
+    &.live::before {
+        background-color: red;
+    }
+}

@@ -1,7 +1,18 @@
 <div class="header">
-    <input type="text" [(ngModel)]="char" (keydown)="onCharKeydown($event)" (keyup)="onCharKeyup($event)" [disabled]="inputDisabled">
-    <div class="clock">Clock</div>
-    <button type="button" (click)="initGridGenerator()" [disabled]="buttonDisabled">Generate 2D grid</button>
+    <div class="form-group">
+        <label for="char">Character</label>
+        <input 
+            placeholder="Character" 
+            type="text" 
+            [(ngModel)]="char"
+            (keydown)="onCharKeydown($event)"
+            (keyup)="onCharKeyup($event)" 
+            [disabled]="inputDisabled" id="char">
+    </div>
+    <div class="clock"><img src="../assets/clock.png" width="60px"></div>
+    <div>
+        <button type="button" (click)="initGridGenerator()" [disabled]="buttonDisabled">Generate 2D grid</button>
+    </div>
 </div>
 <table>
     <thead>

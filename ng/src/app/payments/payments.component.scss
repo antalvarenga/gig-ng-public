@@ -1,0 +1,42 @@
+table.grid {
+    border: none;
+    tr {
+        height: auto;
+    }
+    
+    td {
+        border: none;
+    }
+}
+form {
+    margin-bottom: 20px;
+}
+.form-group {
+    display: inline-block;
+    margin-right: 27px;
+}
+th {
+    padding: 15px;
+    color: #8a9da4;
+    font-weight: normal;
+    font-size: 12px;
+    height: 50px;
+    &:first-child {
+        text-align: left;
+    }
+}
+
+.payments-table > tbody > tr > td {
+    &:first-child {
+        text-align: left;
+    }
+    padding: 15px;
+}
+
+td {
+    text-transform: none;
+}
+
+button.post {
+    margin-top: 20px;
+}

@@ -1,2 +1,48 @@
 <app-display></app-display>
-<div>Payments</div>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="payment">Payment</label>
+        <input 
+            type="text"
+            id="payment"
+            formControlName="name"
+            class="form-control"
+            placeholder="Payment">
+    </div>
+    <div class="form-group">
+        <label for="amount">Amount</label>
+        <input 
+            type="number"
+            id="amount"
+            formControlName="amount"
+            class="form-control"
+            placeholder="Amount">
+    </div>
+    <button type="submit">+ Add</button>
+</form>
+<table class="payments-table">
+    <caption>Payment List</caption>
+    <thead>
+        <th id="name-col">Name</th>
+        <th id="amount-col">Amount</th>
+        <th id="code-col">Code</th>
+        <th id="grid-col">Grid</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of payments">
+            <td>{{ p.name }}</td>
+            <td>{{ p.amount }}</td>
+            <td>{{ p.code }}</td>
+            <td>
+                <table class="grid" *ngIf="p.grid">
+                    <tbody>
+                        <tr *ngFor="let row of p.grid">
+                            <td *ngFor="let col of row">{{col}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button class="post" (click)="postPayments()">Post Payments</button>
