@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    padding-bottom: 100px;
+}
+
+table, th, td {
+    border: 1px solid #666;
+    border-collapse: collapse;
+    text-align: center;
+}
+table {
+    width: 100%;
+}
+tr {
+    height: 50px;
+}
+th#name-col {
+    width: 60%;
+}
+th#grid-col {
+    width: 20%;
+}
+th#amount-col, th#code-col {
+    width: 10%;
+}
+
+button {
+    background-color: #8a9da4;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    font-weight: normal;
+    cursor: pointer;
+    transition: background-color .15s ease-in-out;
+    &:hover {
+        background-color: #677479;
+    }
+}
+
+input {
+    height: 40px;
+    padding: 8px;
+    border: 1px solid #8a9da4;
+    border-radius: 4px;
+    &::placeholder {
+        color: #ccc;
+    }
+}
+
+label, caption {
+    margin-bottom: 10px;
+        color: #8a9da4;
+        font-size: 11px;
+        text-align: left;
+}
+
+label {
+    display: block;
+}
